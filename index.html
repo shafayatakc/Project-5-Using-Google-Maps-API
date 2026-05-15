@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSUN Map Quiz</title>
+ 
+  <!-- Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASEcc5p6SNW_iEyW67mBYmyDKLg0LHoMM"></script>
+ 
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ 
+  <header>
+    <h1>CSUN Campus Map Quiz</h1>
+    <p>Double-click on the map to mark the location!</p>
+  </header>
+ 
+  <div id="main-container">
+ 
+    <div id="panel">
+      <h2>Map Quiz. Please double click on the map the location of:</h2>
+ 
+      <div id="timer-box">Time: <span id="timer-display">0:00</span></div>
+ 
+      <div id="log"></div>
+ 
+      <div id="final-score"></div>
+ 
+      <button id="play-again-btn" onclick="restartGame()">Play Again</button>
+    </div>
+ 
+    <div id="map"></div>
+ 
+  </div>
+ 
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ 
+  <!-- Our script -->
+  <script src="script.js"></script>
+ 
+</body>
+</html>
+ 

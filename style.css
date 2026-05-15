@@ -1,0 +1,141 @@
+/* CSUN Map Quiz - Stylesheet
+   Colors: Red #CC0000, Gold #FFD700, White #FFFFFF */
+ 
+/* Metal Gear Solid style fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Share+Tech+Mono&display=swap');
+ 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  font-family: 'Share Tech Mono', monospace;
+  background-color: #CC0000;
+}
+ 
+/* Header */
+header {
+  background-color: #CC0000;
+  color: #FFD700;
+  text-align: center;
+  padding: 14px;
+  border-bottom: 4px solid #FFD700;
+}
+ 
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+}
+ 
+header p {
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+ 
+/* Main layout */
+#main-container {
+  display: flex;
+  gap: 16px;
+  padding: 4px 16px 16px 16px;
+  height: calc(100vh - 80px);
+}
+ 
+/* Left panel */
+#panel {
+  background-color: white;
+  border: 3px solid #FFD700;
+  border-radius: 6px;
+  width: 270px;
+  min-width: 270px;
+  padding: 14px;
+  overflow-y: auto;
+}
+ 
+#panel h2 {
+  font-size: 1rem;
+  color: #CC0000;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+ 
+/* Timer */
+#timer-box {
+  background-color: #CC0000;
+  color: #FFD700;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+ 
+/* Answer log items */
+.log-item {
+  background-color: #1a6fcc;
+  color: white;
+  padding: 5px 8px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  font-size: 0.85rem;
+}
+ 
+.log-item.correct {
+  color: lightgreen;
+}
+ 
+.log-item.wrong {
+  color: #ff6b6b;
+}
+ 
+/* Final score */
+#final-score {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #CC0000;
+  text-align: center;
+  margin-top: 14px;
+  white-space: pre-line;
+}
+ 
+/* Play again button - hidden until game ends */
+#play-again-btn {
+  display: none;
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  background-color: #CC0000;
+  color: #FFD700;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid #FFD700;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ 
+#play-again-btn:hover {
+  background-color: #aa0000;
+}
+ 
+/* Bounce animation for play again button */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+ 
+#play-again-btn {
+  animation: bounce 0.6s infinite;
+}
+ 
+/* Map - fills remaining space */
+#map {
+  flex: 1;
+  height: 100%;
+  border: 3px solid #FFD700;
+  border-radius: 6px;
+}
+ 
